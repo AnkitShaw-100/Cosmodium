@@ -1,16 +1,42 @@
-# React + Vite
+# QuickURL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Small React + Vite app using Supabase for auth. This README is a short setup and status note.
 
-Currently, two official plugins are available:
+Date: 2026-02-01
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Setup
 
-## React Compiler
+```bash
+npm install
+npm install @supabase/supabase-js
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Create `.env`:
 
-## Expanding the ESLint configuration
+```
+VITE_SUPABASE_URL=https://<your-project-ref>.supabase.co
+VITE_SUPABASE_KEY=<your-anon-or-service-role-key>
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Run dev server:
+
+```bash
+npm run dev
+```
+
+Notes
+
+- Enable Google provider in your Supabase project and set the Google OAuth redirect URI to `https://<your-project-ref>.supabase.co/auth/v1/callback`.
+- Ensure `VITE_SUPABASE_URL` points to the same Supabase project where Google is enabled.
+
+Where to look
+
+- `src/db/supabse.js` — Supabase client
+- `src/db/apiAuth.js` — auth helpers (Google OAuth)
+- `src/context.jsx` — app context exposing user and `signOut()`
+- `src/main.jsx` — provider mount
+- `src/components/login.jsx`, `src/components/signup.jsx`, `src/components/header.jsx`, `src/pages/auth.jsx`
+
+Progress
+
+- Core auth flows implemented; Google OAuth helper added; `signOut()` wired into header.
