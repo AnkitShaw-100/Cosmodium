@@ -20,7 +20,7 @@ const LandingPage = () => {
 
     return (
         <div className="w-full flex justify-center px-4 sm:px-6 lg:px-8">
-            <div className="w-full max-w-7xl flex flex-col items-center">
+            <div className="w-full max-w-5xl flex flex-col items-center min-h-screen py-8">
                 {/* Heading */}
                 <h2 className="mt-10 sm:mt-16 mb-8 text-center font-extrabold text-white leading-tight text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">
                     The only URL Shortener <br />
@@ -43,18 +43,18 @@ const LandingPage = () => {
                     <Button
                         type="submit"
                         variant="destructive"
-                        className="h-12 sm:h-14 px-6 text-base sm:text-lg"
+                        className="h-12 sm:h-14 px-6 text-base sm:text-lg w-full sm:w-auto"
                     >
                         Shorten!
                     </Button>
                 </form>
 
                 {/* Banner */}
-                <div className="w-full max-w-6xl my-10 sm:my-14">
+                <div className="w-full max-w-4xl my-10 sm:my-14">
                     <img
                         src="/Banner.png"
                         alt="URL Shortener Banner"
-                        className="w-full rounded-lg object-contain"
+                        className="w-full rounded-lg object-cover max-h-60 sm:max-h-96"
                     />
                 </div>
 

@@ -1,10 +1,17 @@
 import React from 'react'
+import { BarLoader } from "react-spinners";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const DashboardPage = () => {
   return (
     <div>
-      <h1>Dashboard</h1>
-      <p>This is the dashboard page.</p>
+      {<BarLoader width={"100%"} colors="#36d7b7" />}
+      <div>
+
+      </div>
+      <Card>
+
+      </Card>
     </div>
   )
 }

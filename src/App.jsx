@@ -7,6 +7,11 @@ import RequireAuth from "./components/require-auth";
 
 // import RedirectLink from "./pages/redirect-link";
 import LandingPage from "./pages/landing";
+import PrivacyPolicy from "./pages/privacy";
+import TermsOfService from "./pages/terms";
+import Documentation from "./pages/documentation";
+import Support from "./pages/support";
+import FAQs from "./pages/faqs";
 import Dashboard from "./pages/dashboard";
 import LinkPage from "./pages/link";
 import Auth from "./pages/auth";
@@ -19,6 +24,26 @@ const router = createBrowserRouter([
         path: "/",
         element: <LandingPage />,
       },
+        {
+          path: "/documentation",
+          element: <Documentation />,
+        },
+        {
+          path: "/privacy",
+          element: <PrivacyPolicy />,
+        },
+        {
+          path: "/terms",
+          element: <TermsOfService />,
+        },
+        {
+          path: "/support",
+          element: <Support />,
+        },
+        {
+          path: "/faqs",
+          element: <FAQs />,
+        },
       {
         path: "/auth",
         element: <Auth />,

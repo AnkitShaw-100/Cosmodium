@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className="flex flex-col md:flex-row md:justify-between gap-8">
 
                         {/* Brand */}
-                        <div className="max-w-sm">
+                        <div className="max-w-sm w-full">
                             <h2 className="text-white font-semibold text-xl">
                                 Cosmodium
                             </h2>
@@ -21,7 +21,7 @@ const Footer = () => {
                         </div>
 
                         {/* Links */}
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 text-sm">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-sm w-full">
 
                             <div>
                                 <h3 className="text-white font-medium mb-3">
@@ -46,13 +46,13 @@ const Footer = () => {
                                 </h3>
                                 <ul className="space-y-2 text-gray-400">
                                     <li>
-                                        <a href="#" className="block hover:text-white hover:underline transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded">Documentation</a>
+                                        <a href="/documentation" className="block hover:text-white hover:underline transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded">Documentation</a>
                                     </li>
                                     <li>
-                                        <a href="#" className="block hover:text-white hover:underline transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded">Support</a>
+                                        <a href="/support" className="block hover:text-white hover:underline transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded">Support</a>
                                     </li>
                                     <li>
-                                        <a href="#" className="block hover:text-white hover:underline transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded">FAQs</a>
+                                        <a href="/faqs" className="block hover:text-white hover:underline transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded">FAQs</a>
                                     </li>
                                 </ul>
                             </div>
@@ -63,10 +63,10 @@ const Footer = () => {
                                 </h3>
                                 <ul className="space-y-2 text-gray-400">
                                     <li>
-                                        <a href="#" className="block hover:text-white hover:underline transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded">Privacy Policy</a>
+                                            <a href="/privacy" className="block hover:text-white hover:underline transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded">Privacy Policy</a>
                                     </li>
                                     <li>
-                                        <a href="#" className="block hover:text-white hover:underline transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded">Terms of Service</a>
+                                        <a href="/terms" className="block hover:text-white hover:underline transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded">Terms of Service</a>
                                     </li>
                                 </ul>
                             </div>
@@ -78,7 +78,7 @@ const Footer = () => {
                     <div className="my-8 h-px bg-white/10" />
 
                     {/* Bottom row */}
-                    <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-center sm:text-left">
                         <p className="text-gray-400">
                             © {new Date().getFullYear()} Cosmodium
                         </p>
