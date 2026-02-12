@@ -1,14 +1,13 @@
 import Login from "@/components/login";
 import Signup from "@/components/signup";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {UrlState} from "@/context";
-import {useEffect} from "react";
-import {useNavigate, useSearchParams} from "react-router-dom";
+import { UrlState } from "@/context";
+import { useEffect, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 function Auth() {
   let [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const {isAuthenticated, loading} = UrlState();
+  const { isAuthenticated, loading } = UrlState();
   const longLink = searchParams.get("createNew");
 
   useEffect(() => {
@@ -16,25 +15,26 @@ function Auth() {
       navigate(`/dashboard?${longLink ? `createNew=${longLink}` : ""}`);
   }, [isAuthenticated, loading, navigate]);
 
+  const [tab, setTab] = useState(searchParams.get("tab") || "login");
+
+  useEffect(() => {
+    const p = searchParams.get("tab") || "login";
+    setTab(p);
+  }, [searchParams]);
+
   return (
-    <div className="mt-36 flex flex-col items-center gap-10">
-      <h1 className="text-5xl font-extrabold">
+    <div className="min-h-screen flex flex-col items-center justify-start sm:justify-center px-4 py-12">
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-center mb-6">
         {searchParams.get("createNew")
           ? "Hold up! Let's login first.."
           : "Login / Signup"}
       </h1>
-      <Tabs defaultValue="login" className="w-100">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="login">Login</TabsTrigger>
-          <TabsTrigger value="signup">Signup</TabsTrigger>
-        </TabsList>
-        <TabsContent value="login">
-          <Login />
-        </TabsContent>
-        <TabsContent value="signup">
-          <Signup />
-        </TabsContent>
-      </Tabs>
+
+      <div className="w-full max-w-md">
+        <div className="flex justify-center py-6">
+          {tab === "signup" ? <Signup /> : <Login />}
+        </div>
+      </div>
     </div>
   );
 }

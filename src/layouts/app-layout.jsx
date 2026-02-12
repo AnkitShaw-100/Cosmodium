@@ -1,12 +1,12 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Header from '@/components/header'
-import Footer from '@/components/footer'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const AppLayout = () => {
   return (
     <div>
-      <main className='min-h-screen container'>
+      <main className="min-h-screen container">
         {/* Header */}
         <Header />
         {/* Body */}
@@ -15,7 +15,7 @@ const AppLayout = () => {
       {/* Footer */}
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default AppLayout
+export default AppLayout;

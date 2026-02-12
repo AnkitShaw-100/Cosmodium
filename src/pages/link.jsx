@@ -1,8 +1,8 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React from "react";
+import { useParams } from "react-router-dom";
 
 const LinkPage = () => {
-  const { id } = useParams()
+  const { id } = useParams();
 
   return (
     <div>
@@ -10,7 +10,7 @@ const LinkPage = () => {
       <p>Link id: {id}</p>
       <p>This page could show link details and analytics.</p>
     </div>
-  )
-}
+  );
+};
 
-export default LinkPage
+export default LinkPage;

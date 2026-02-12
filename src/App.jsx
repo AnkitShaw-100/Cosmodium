@@ -24,26 +24,26 @@ const router = createBrowserRouter([
         path: "/",
         element: <LandingPage />,
       },
-        {
-          path: "/documentation",
-          element: <Documentation />,
-        },
-        {
-          path: "/privacy",
-          element: <PrivacyPolicy />,
-        },
-        {
-          path: "/terms",
-          element: <TermsOfService />,
-        },
-        {
-          path: "/support",
-          element: <Support />,
-        },
-        {
-          path: "/faqs",
-          element: <FAQs />,
-        },
+      {
+        path: "/documentation",
+        element: <Documentation />,
+      },
+      {
+        path: "/privacy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "/terms",
+        element: <TermsOfService />,
+      },
+      {
+        path: "/support",
+        element: <Support />,
+      },
+      {
+        path: "/faqs",
+        element: <FAQs />,
+      },
       {
         path: "/auth",
         element: <Auth />,
